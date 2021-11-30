@@ -1,0 +1,109 @@
+{
+  "name": "vaccination-booking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "start": "webpack serve --mode development --env development --open --hot",
+    "build": "webpack --mode production",
+    "test": "jest",
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "printWidth": 90,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": "eslint --fix",
+    "*.+(json|css|md)": "prettier --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://kedharnathrafcos.github.io/vaccinne-slot/",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.15.2",
+    "css-loader": "^5.2.6",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.24.0",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "^4.3.8",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^23.4.2",
+    "lint-staged": "^11.0.0",
+    "node-sass": "^6.0.1",
+    "path": "^0.12.7",
+    "prettier": "^2.2.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.43.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@emotion/babel-plugin": "^11.3.0",
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.1.0",
+    "@mui/material": "^5.1.1",
+    "@mui/styled-engine-sc": "^5.1.0",
+    "axios": "^0.24.0",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^2.0.0",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.0.2",
+    "react-spinners": "^0.11.0",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.0",
+    "styled-components": "^5.3.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "ie 11"
+    ]
+  }
+}
